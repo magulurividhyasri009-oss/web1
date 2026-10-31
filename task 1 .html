@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+nav {
+    background: #171738;
+    padding: 18px 8%;
+ 
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+}
+
+.logo {
+    color: #00e5ff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #00e5ff;
+}
+
+/* Header */
+header {
+    min-height: 75vh;
+    background: linear-gradient(135deg, #171738, #5145a8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    animation: slideIn 1s ease;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+header span, footer span {
+    color: #00e5ff;
+}
+
+header p {
+    line-height: 1.7;
+    margin: 15px auto;
+    max-width: 550px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00e5ff;
+    color: #171738;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.08);
+}
+
+/* Sections */
+section {
+    padding: 45px 8%;
+    text-align: center;
+    scroll-margin-top: 75px;
+}
+
+section h2 {
+    color: #29245c;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px #00000025;
+}
+
+.card h3 {
+    color: #5145a8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 8px;
+    line-height: 1.5;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #29245c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00aeca;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #171738;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links a {
+        font-size: 13px;
+        margin: 6px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <span class="logo">MyPortfolio</span>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Profile -->
+<header id="home">
+    <div>
+        <h1>Hello, I'm <span>Vidhyasri</span></h1>
+        <h2>B.Tech Student | AIML</h2>
+        <p>
+            Welcome to my personal portfolio!
+            I am interested in Artificial Intelligence,
+            Machine Learning and Web Development.
+        </p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+</header>
+
+<!-- Education -->
+<section id="education">
+    <h2>Educational Qualifications</h2>
+    <div class="card">
+        <h3>B.Tech - AIML</h3>
+        <p>NRI University</p>
+        <p>Currently Pursuing</p>
+    </div>
+    <div class="card">
+        <h3>Intermediate</h3>
+        <p>Add your college details</p>
+    </div>
+    <div class="card">
+        <h3>Schooling</h3>
+        <p>Add your school details</p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+        <span>Java</span>
+        <span>Machine Learning</span>
+    </div>
+</section>
+
+<!-- Hobbies -->
+<section id="hobbies">
+    <h2>My Hobbies</h2>
+    <div class="card">
+        <p>Reading Books</p>
+        <p>Listening to Music</p>
+        <p>Learning New Technologies</p>
+        <p>Designing</p>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive website using HTML and CSS.</p>
+    </div>
+    <div class="card">
+        <h3>AI Mini Project</h3>
+        <p>A beginner project based on Artificial Intelligence.</p>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+    <h2>My Achievements</h2>
+    <div class="card">
+        <p>Participated in technical workshops.</p>
+        <p>Learning new skills and developing projects.</p>
+    </div>
+</section>
+
+<!-- Resume -->
+<section id="resume">
+    <h2>My Resume</h2>
+    <p>Click below to download my resume.</p>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <p>Email: yourname@gmail.com</p>
+        <p>Phone: +91 XXXXXXXXXX</p>
+        <p>Location: Andhra Pradesh, India</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 <span>Vidhyasri</span>. All Rights Reserved.</p>
+    <p>Designed with HTML and CSS</p>
+</footer>
+
+</body>
+</html>
